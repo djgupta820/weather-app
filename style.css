@@ -11,7 +11,8 @@ header{
     flex-wrap: wrap;
     align-items: center;
     justify-content:space-around;
-    position: sticky;
+    position: fixed;
+    top: 0;
 }
 header h1{
     color: white;
@@ -52,6 +53,7 @@ header button:hover{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 }
 .card{
     min-width: 200px;
@@ -81,4 +83,14 @@ header button:hover{
     display: flex;
     align-items: center;
     justify-content: end;
+}
+@media all and (width < 420px){
+    #main{
+        margin-top: 200px;
+    }
+}
+@media all and (420px < width<653px){
+    #main{
+        margin-top: 100px;
+    }
 }
