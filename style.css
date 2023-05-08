@@ -11,6 +11,7 @@ header{
     flex-wrap: wrap;
     align-items: center;
     justify-content:space-around;
+    position: sticky;
 }
 header h1{
     color: white;
