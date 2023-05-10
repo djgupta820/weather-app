@@ -1,6 +1,6 @@
 :root{
     --top:#001524;
-    --bg-color: #0081a7;
+    --bg-color: #a6ddee;
 }
 *{
     margin: 0;
@@ -37,8 +37,8 @@ header input{
     font-size: 20px;
     margin: 10px;
     border-radius: 5px;
-    border-color: purple;
-    background-color: rgb(241, 178, 241);
+    border-color: #a6d3f3;
+    background-color: #a6d3f3;
     text-transform: capitalize;
 }
 
@@ -47,15 +47,15 @@ header button{
     height: 30px;
     font-size: 15px;
     font-weight: bold;
-    border: 1px solid rgb(241, 178, 241);
-    background-color: rgb(241, 178, 241);
+    border: 1px solid #a6d3f3;
+    background-color: #a6d3f3;
     border-radius: 5px;
     margin: 10px;
     
 }
 header button:hover{
     transition: .5s;
-    background-color: rgb(240, 125, 240);
+    background-color: #2d9eee;
 }
 .misc{
     width: 80%;
@@ -79,8 +79,8 @@ header button:hover{
     justify-content: space-around;
 }
 .inner{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border: 1px solid black;
     border-radius: 10px;
     margin: 10px;
@@ -89,11 +89,28 @@ header button:hover{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    background-color: #6cb4e7;
+}
+.inner:hover{
+    transition: .5s;
+    transform: scale(1.1, 1.1);
 }
 .inner p{
     font-size: 1.3em;
     font-weight: bold;
 }
+p, sup, b{
+    color: #001524;
+}
 .rotate{
     transform: rotate(90deg);
+}
+
+@media all and (width<630px){
+    .misc{
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 }
