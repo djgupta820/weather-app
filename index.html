@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <title>Weather</title>
 </head>
+
 <body>
     <header>
         <h1>Weather Report</h1>
-        <input type="text" name="city" id="city">
-        <button id="btn"> Find </button>
+        <div class="form">
+            <input type="text" name="city" id="city">
+            <button id="btn"> Find </button>
+        </div>
     </header>
-    <main id="main"></main>
+    <main id="main">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </main>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/797817b03b.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

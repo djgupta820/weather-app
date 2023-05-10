@@ -24,7 +24,7 @@ xhr.onload = function(){
     let country = document.createElement('label')
     country.appendChild(document.createTextNode(`Country: ${data['sys']['country']}`))
     let temp = document.createElement('label')
-    temp.appendChild(document.createTextNode(`Temprature: ${data['main']['temp']}`))
+    temp.appendChild(document.createTextNode(`Temprature: ${data['main']['temp']-273.15}`))
     let humidity = document.createElement('label')
     humidity.appendChild(document.createTextNode(`Humidity: ${data['main']['humidity']}`))
     let wind = document.createElement('label')
