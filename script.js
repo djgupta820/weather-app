@@ -59,3 +59,21 @@ btn.addEventListener('click', (e)=>{
         alert('Please input city name')
     }
 })
+
+function getDateTime(){
+    let d = new Date()
+    let dt = d.toDateString() + ' ' + d.toLocaleTimeString()
+    document.querySelector('#time').innerText = dt
+    // return dt
+}
+
+function getWeather(){
+    let city = 'delhi'
+    let api = '2931ed5fc5a27bacd2725cbee652c43b'
+    xhr.open("get", `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`)
+    xhr.send()
+}
+
+document.onload = getDateTime()
+
+console.log(navigator.getCurrentPosition())

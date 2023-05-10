@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Weather</title>
 </head>
 
@@ -17,13 +18,31 @@
             <button id="btn"> Find </button>
         </div>
     </header>
+    <div class="misc">
+        <p id="time"></p>
+        <p id="con"></p>
+        <p id="cty"></p>
+    </div>
     <main id="main">
-        <div class="inner"></div>
-        <div class="inner"></div>
-        <div class="inner"></div>
+        <div class="inner">
+            <img src="images/thermometer.png" alt="temperature">
+            <p>Temperature</p>
+            <div style="display: flex;"><p id="temp">32</p> &nbsp;<sup><b>o</b></sup> <p>&nbsp;C</p></div>
+        </div>
+        <div class="inner">
+            <img src="images/humidity.png" alt="Humidity">
+            <p>Humidity</p>
+            <p id="humid">168</p>
+        </div>
+        <div class="inner">
+            <img src="images/smoke.png" alt="Wind" class="rotate">
+            <p>Wind Speed</p>
+            <p id="wind">10 mph</p>
+        </div>
     </main>
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/797817b03b.js" crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="newscript.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/797817b03b.js" crossorigin="anonymous"></script> -->
 </body>
 
 </html>

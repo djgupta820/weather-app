@@ -1,12 +1,18 @@
+:root{
+    --top:#001524;
+    --bg-color: #0081a7;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: var(--bg-color);
+}
 header{
-    background-color: purple;
+    background-color: var(--top);
     width: 100%;
-    /* min-height: 100px; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -51,6 +57,16 @@ header button:hover{
     transition: .5s;
     background-color: rgb(240, 125, 240);
 }
+.misc{
+    width: 80%;
+    height: 30px;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.3em;
+}
 #main{
     width: 90%;
     min-height: 450px;
@@ -61,7 +77,6 @@ header button:hover{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid black;
 }
 .inner{
     width: 200px;
@@ -69,33 +84,16 @@ header button:hover{
     border: 1px solid black;
     border-radius: 10px;
     margin: 10px;
-}
-.card{
-    min-width: 200px;
-    max-width: 250px;
-    min-height: 170px;
-    border: 1px solid orange;
-    margin: 10px;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: orange;
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: 1s;
-    opacity: 1;
-}
-
-.remove{
-    width: fit-content;
-    height: fit-content;
-    font-weight: bolder;
-    padding: 1px 3px;
-    border: 1px solid black;
-    background-color: red;
-    border-radius: 50%;
-    display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
+    gap: 10px;
+}
+.inner p{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.rotate{
+    transform: rotate(90deg);
 }
