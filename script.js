@@ -6,10 +6,30 @@ class WeatherApp{
         this.xhr = new XMLHttpRequest()
     }
 
-    setDateTime(element){
+    setDate(element){
         let d = new Date()
-        let dt = d.toDateString() + ' ' + d.toLocaleTimeString()
+        let dt = d.toDateString()
         element.innerText = dt
+    }
+
+    setTime(element){
+        let d = new Date()
+        let hours = d.getHours()
+        let mints =  d.getMinutes()
+        let sec = d.getSeconds()
+        
+        if(hours <= 9){
+            hours = '0' + hours
+        }
+        if(mints <= 9){
+            mints = '0' + mints
+        }
+        if(sec <= 9){
+            sec = '0' + sec
+        }
+    
+        let t = hours + ' : ' + mints + ' : ' + sec
+        element.innerText = t
     }
 
     getData(city=this.city){
@@ -46,9 +66,15 @@ class WeatherApp{
 }
 
 const weather = new WeatherApp('delhi')
-let el = document.querySelector('#time')
-document.onload = weather.setDateTime(el)
+
+let elt = document.querySelector('#time')
+let eld = document.querySelector('#date')
+
+document.onload = weather.setDate(eld)
+setInterval(weather.setTime, 1000, elt)
+
 weather.getData()
+
 document.querySelector('#btn').addEventListener('click', ()=>{
     let city = document.querySelector('#city').value
     if(city !== ''){

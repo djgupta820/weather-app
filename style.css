@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
 :root{
     --top:#001524;
     --bg-color: #a6ddee;
@@ -6,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Bruno Ace SC', cursive;
 }
 body{
     background-color: var(--bg-color);
@@ -29,7 +32,7 @@ header{
 }
 header h1{
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
 }
 header input{
     min-width: 40%;
@@ -68,9 +71,19 @@ header button:hover{
     justify-content: space-around;
     font-size: 1.3em;
 }
+.dt{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#con, #cty{
+    font-size: 1.3em;
+    font-weight: bold;
+}
 #main{
     width: 90%;
-    min-height: 450px;
+    min-height: 400px;
     margin: auto;
     margin-top: 10px;
     padding: 5px;
@@ -106,7 +119,6 @@ p, sup, b{
 .rotate{
     transform: rotate(90deg);
 }
-
 @media all and (width<630px){
     .misc{
         flex-direction: column;
