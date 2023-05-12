@@ -119,6 +119,36 @@ p, sup, b{
 .rotate{
     transform: rotate(90deg);
 }
+/*
+.ball{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    animation: inc 1s linear 1;
+    display: none;
+    position: absolute;
+    top: 170px;
+}
+.inner-ball{
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    animation: inc 1s linear 1;
+    position: absolute;
+    top: 23px;
+    right: 23px;
+}
+@keyframes inc{
+    50%{
+        transform: scale(1.5, 1.5);
+    }
+}
+*/
 @media all and (width<630px){
     .misc{
         flex-direction: column;
