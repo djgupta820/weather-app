@@ -69,8 +69,6 @@ const weather = new WeatherApp('delhi')
 
 let elt = document.querySelector('#time')
 let eld = document.querySelector('#date')
-let ball = document.querySelector('.ball')
-let inball = document.querySelector('.inner-ball')
 
 document.onload = weather.setDate(eld)
 setInterval(weather.setTime, 1000, elt)
@@ -80,14 +78,9 @@ weather.getData()
 document.querySelector('#btn').addEventListener('click', ()=>{
     let city = document.querySelector('#city').value
     if(city !== ''){
-        ball.style.display = 'block'
-        inball.style.display = 'block'
-        setTimeout(()=>{
-            weather.getData(city)
-            ball.style.display = 'none'
-            inball.style.display = 'none'
-        }, 1000)
+        weather.getData(city)
     }else{
         alert('Please insert city name')
     }
+    document.querySelector('#city').value = ''
 })

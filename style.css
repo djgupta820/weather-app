@@ -63,7 +63,7 @@ header button:hover{
 }
 .misc{
     width: 80%;
-    height: 30px;
+    min-height: 30px;
     margin: auto;
     margin-top: 10px;
     display: flex;
@@ -72,7 +72,7 @@ header button:hover{
     font-size: 1.3em;
 }
 .dt{
-    width: 40%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -119,6 +119,28 @@ p, sup, b{
 .rotate{
     transform: rotate(90deg);
 }
+
+@media all and (width < 760px){
+    .dt{
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media all and (width<630px){
+    .misc{
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .inner{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Misc. styles */
 /*
 .ball{
     width: 100px;
@@ -149,11 +171,3 @@ p, sup, b{
     }
 }
 */
-@media all and (width<630px){
-    .misc{
-        flex-direction: column;
-        gap: 5px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-}
