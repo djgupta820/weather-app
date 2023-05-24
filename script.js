@@ -69,7 +69,12 @@ const weather = new WeatherApp('delhi')
 
 let elt = document.querySelector('#time')
 let eld = document.querySelector('#date')
-
+let search = document.querySelector('#search')
+search.addEventListener('click', (e)=>{
+    let form = document.getElementById('form')
+    form.style.display = 'flex'
+    search.style.display = 'none'
+})
 document.onload = weather.setDate(eld)
 setInterval(weather.setTime, 1000, elt)
 

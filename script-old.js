@@ -73,7 +73,5 @@ function getWeather(){
     xhr.open("get", `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`)
     xhr.send()
 }
-
 document.onload = getDateTime()
-
 console.log(navigator.getCurrentPosition())
